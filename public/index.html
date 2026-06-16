@@ -22,6 +22,7 @@
     <a href="#s3" data-n="3"></a>
     <a href="#s4" data-n="4"></a>
     <a href="#s5" data-n="5"></a>
+    <a href="#s6" data-n="6"></a>
   </nav>
 
   <header class="topfixed">
@@ -135,53 +136,56 @@
       </div>
     </section>
 
-    <!-- ===== 5 · BENCHMARKS ===== -->
+    <!-- ===== 5 · BENCHMARK 1 — YC-BENCH ===== -->
     <section class="slide cap bench" id="s5">
-      <div class="cap-wrap wide">
-        <div class="num">05</div>
-        <div class="cap-body">
-          <p class="kicker">PROVEN, NOT CLAIMED</p>
-          <h2>The <span class="accent">benchmarks.</span></h2>
-          <p class="big">Two <strong>independent, third-party</strong> benchmarks — not our own scoreboard. They measure the
-            two hardest things an autonomous workforce must do, and on our internal runs we <strong>top both.</strong></p>
-          <div class="boards">
-            <!-- YC-Bench leaderboard -->
-            <div class="board">
-              <div class="bhead"><span class="btag">YC-Bench</span><span class="bby">Collinear AI · long-horizon execution</span></div>
-              <p class="bwhat"><b>What it is:</b> an agent runs a simulated startup for a <b>full year</b> — payroll,
-                adversarial clients, hundreds of decisions. Metric = <b>net worth</b> after 3 seeds.</p>
-              <div class="lb">
+      <div class="benchwrap">
+        <p class="kicker">PROVEN, NOT CLAIMED · BENCHMARK 1 OF 2</p>
+        <h2><span class="accent">YC-Bench</span> — long-horizon execution</h2>
+        <p class="bsub"><b>What it is:</b> an agent runs a simulated startup for a <b>full year</b> — payroll, adversarial clients, hundreds of decisions. Metric = <b>net worth</b> after 3 seeds. On our internal runs, <b>Top-3 are all Ninja.</b></p>
+        <div class="benchpanel">
+          <div class="bchart"><canvas id="ycChart"></canvas></div>
+          <div class="bcol">
+            <div class="lb">
                 <div class="row win"><span class="rk">🥷1</span><span class="who">Ninja — best run <em>internal</em></span><span class="track"><i style="--w:100%"></i></span><b class="val">$2.88M</b></div>
                 <div class="row win"><span class="rk">🥷2</span><span class="who">Ninja — avg / 3 seeds <em>internal</em></span><span class="track"><i style="--w:81%"></i></span><b class="val">&gt;$2.3M</b></div>
                 <div class="row"><span class="rk">3</span><span class="who">Claude Fable 5 <em>public #1</em></span><span class="track"><i style="--w:69%"></i></span><b class="val">$1.98M</b></div>
                 <div class="row"><span class="rk">4</span><span class="who">Claude Opus 4.7</span><span class="track"><i style="--w:59%"></i></span><b class="val">$1.71M</b></div>
                 <div class="row"><span class="rk">5</span><span class="who">GLM-5.1</span><span class="track"><i style="--w:52%"></i></span><b class="val">$1.51M</b></div>
                 <div class="row"><span class="rk">6</span><span class="who">Claude Opus 4.6</span><span class="track"><i style="--w:44%"></i></span><b class="val">$1.27M</b></div>
-              </div>
-              <p class="bnote">Ninja rows = our <b>internal runs</b> · public board topped by Fable&nbsp;5 ($1.98M). <b>Top-3 all Ninja.</b></p>
             </div>
-            <!-- Continual Learning leaderboard -->
-            <div class="board">
-              <div class="bhead"><span class="btag">Continual Learning Bench</span><span class="bby">UC Berkeley · Snorkel · learning that compounds</span></div>
-              <p class="bwhat"><b>What it is:</b> how much an agent <b>improves across a sequence</b> of tasks vs its own
-                no-memory baseline. Metric = <b>aggregate reward</b> (higher = learns more).</p>
-              <div class="lb">
+            <a class="srclink" href="https://collinear-ai.github.io/yc-bench/" target="_blank" rel="noopener">View benchmark → <em>Collinear AI · arXiv 2604.01212</em></a>
+            <p class="bnote">Independent third-party board · Ninja rows = our <b>internal runs</b> (public top: Fable 5 $1.98M).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6 · BENCHMARK 2 — CONTINUAL LEARNING ===== -->
+    <section class="slide cap bench" id="s6">
+      <div class="benchwrap">
+        <p class="kicker">PROVEN, NOT CLAIMED · BENCHMARK 2 OF 2</p>
+        <h2><span class="accent">Continual Learning</span> — learning that compounds</h2>
+        <p class="bsub"><b>What it is:</b> how much an agent <b>improves across a sequence</b> of tasks vs its own no-memory baseline. Metric = <b>aggregate reward</b>. Same model, <b>+PEEK jumps #7 → #1 &amp; #2.</b></p>
+        <div class="benchpanel">
+          <div class="bchart"><canvas id="clChart"></canvas></div>
+          <div class="bcol">
+            <div class="lb">
                 <div class="row win"><span class="rk">🥷1</span><span class="who">PEEK · Opus 4.7 <em>internal</em></span><span class="track"><i style="--w:100%"></i></span><b class="val">+0.232</b></div>
                 <div class="row win"><span class="rk">🥷2</span><span class="who">PEEK · Opus 4.7 <em>internal</em></span><span class="track"><i style="--w:99%"></i></span><b class="val">+0.229</b></div>
                 <div class="row"><span class="rk">3</span><span class="who">ICL · Sonnet 4.6 <em>public #1</em></span><span class="track"><i style="--w:96%"></i></span><b class="val">+0.223</b></div>
                 <div class="row"><span class="rk">4</span><span class="who">ICL · GPT-5.4</span><span class="track"><i style="--w:87%"></i></span><b class="val">+0.201</b></div>
                 <div class="row"><span class="rk">5</span><span class="who">Claude Code · Sonnet 4.6</span><span class="track"><i style="--w:82%"></i></span><b class="val">+0.190</b></div>
                 <div class="row dim"><span class="rk">7</span><span class="who">ICL · Opus 4.7 — <b>no PEEK</b></span><span class="track"><i style="--w:44%"></i></span><b class="val">+0.102</b></div>
-              </div>
-              <p class="bnote">Same model, <b>+PEEK</b> jumps #7 → <b>#1 &amp; #2</b>. PEEK self-reflects + extracts win/fail rules every run.</p>
             </div>
+            <a class="srclink" href="https://continual-learning-bench.com/" target="_blank" rel="noopener">View benchmark → <em>UC Berkeley · Snorkel · arXiv 2606.05661</em></a>
+            <p class="bnote">Independent third-party board · Ninja rows = our <b>internal runs</b> (public top: ICL·Sonnet 4.6 +0.223).</p>
           </div>
-          <p class="foot-note">Independent industry yardsticks we top on our internal runs · Foundry Live · GitHub SF · June 16, 2026</p>
         </div>
       </div>
     </section>
 
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
   <script src="app.js"></script>
 </body>
 </html>

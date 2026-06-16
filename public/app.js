@@ -124,8 +124,37 @@
     if (document.activeElement && document.activeElement.id === "goal") return;
     if (["ArrowDown", "PageDown", " "].includes(e.key)) { e.preventDefault(); go(current + 1); }
     else if (["ArrowUp", "PageUp"].includes(e.key)) { e.preventDefault(); go(current - 1); }
-    else if (/^[0-5]$/.test(e.key)) { e.preventDefault(); go(parseInt(e.key, 10)); }
+    else if (/^[0-6]$/.test(e.key)) { e.preventDefault(); go(parseInt(e.key, 10)); }
   });
+})();
+
+// ============================================================
+//  05/06 · benchmark Chart.js bar graphs (Ninja highlighted green)
+// ============================================================
+(function () {
+  if (typeof Chart === "undefined") return;
+  const GREEN = "#36f08a", BLUE = "rgba(91,140,255,.6)", DIM = "rgba(91,140,255,.28)";
+  const common = (axisTitle) => ({
+    indexAxis: "y", responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { title: { display: true, text: axisTitle, color: "#9fb2d6", font: { size: 13 } },
+           ticks: { color: "#9fb2d6" }, grid: { color: "rgba(120,160,255,.12)" } },
+      y: { ticks: { color: "#eaf0ff", font: { size: 13, weight: "600" } }, grid: { display: false } },
+    },
+  });
+  const yc = document.getElementById("ycChart");
+  if (yc) new Chart(yc, { type: "bar",
+    data: { labels: ["Ninja — best", "Ninja — avg", "Fable 5", "Opus 4.7", "GLM-5.1", "Opus 4.6"],
+      datasets: [{ data: [2.88, 2.33, 1.98, 1.71, 1.51, 1.27],
+        backgroundColor: [GREEN, GREEN, BLUE, BLUE, BLUE, BLUE], borderRadius: 6 }] },
+    options: common("avg net worth / 3 seeds  ($M)") });
+  const cl = document.getElementById("clChart");
+  if (cl) new Chart(cl, { type: "bar",
+    data: { labels: ["Ninja PEEK #1", "Ninja PEEK #2", "ICL·Sonnet 4.6", "GPT-5.4", "Claude Code", "no-PEEK (#7)"],
+      datasets: [{ data: [0.232, 0.229, 0.223, 0.201, 0.190, 0.102],
+        backgroundColor: [GREEN, GREEN, BLUE, BLUE, BLUE, DIM], borderRadius: 6 }] },
+    options: common("aggregate reward (gain)") });
 })();
 
 // ============================================================

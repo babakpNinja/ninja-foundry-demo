@@ -174,3 +174,16 @@ h2{font-family:"Overpass";font-weight:900;font-size:clamp(2.2rem,5vw,4rem);line-
 .row.dim{opacity:.72}.row.dim .track i{background:linear-gradient(90deg,#5a4a8f,#8a6fd6)}
 .bnote{margin-top:.7rem;font-size:.74rem;color:#8aa0c8;line-height:1.4}.bnote b{color:#dbe6ff}
 @media (max-width:900px){.boards{grid-template-columns:1fr}}
+
+/* #20 — big benchmark panels */
+.benchwrap{max-width:1240px;width:100%}
+.bsub{font-size:clamp(.95rem,1.4vw,1.25rem);line-height:1.5;color:var(--muted);margin:.8rem 0 1.5rem;max-width:95ch}
+.bsub b{color:#fff}
+.benchpanel{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(1.4rem,4vw,3.2rem);align-items:center}
+.bchart{height:min(56vh,460px);background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:16px;padding:1rem}
+.srclink{display:inline-flex;align-items:center;gap:.6em;margin-top:1.2rem;font-family:"Overpass";font-weight:800;
+  font-size:.92rem;color:#fff;text-decoration:none;background:linear-gradient(100deg,var(--blue),var(--violet));
+  padding:.65em 1.15em;border-radius:999px;box-shadow:0 8px 24px rgba(47,107,255,.45);transition:transform .12s}
+.srclink em{font-style:normal;font-weight:500;font-size:.74rem;opacity:.82}
+.srclink:hover{transform:translateY(-1px)}
+@media(max-width:920px){.benchpanel{grid-template-columns:1fr}.bchart{height:300px}}
