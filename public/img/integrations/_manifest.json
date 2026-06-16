@@ -1,0 +1,257 @@
+[
+ {
+  "label": "Slack",
+  "file": "img/integrations/slack.png",
+  "slug": "slack_v2"
+ },
+ {
+  "label": "Gmail",
+  "file": "img/integrations/gmail.png",
+  "slug": "gmail"
+ },
+ {
+  "label": "GitHub",
+  "file": "img/integrations/github.png",
+  "slug": "github"
+ },
+ {
+  "label": "Google Sheets",
+  "file": "img/integrations/google-sheets.png",
+  "slug": "google_sheets"
+ },
+ {
+  "label": "Google Drive",
+  "file": "img/integrations/google-drive.png",
+  "slug": "google_drive"
+ },
+ {
+  "label": "Google Calendar",
+  "file": "img/integrations/google-calendar.png",
+  "slug": "google_calendar"
+ },
+ {
+  "label": "Salesforce",
+  "file": "img/integrations/salesforce.png",
+  "slug": "salesforce_rest_api"
+ },
+ {
+  "label": "HubSpot",
+  "file": "img/integrations/hubspot.png",
+  "slug": "hubspot"
+ },
+ {
+  "label": "Notion",
+  "file": "img/integrations/notion.png",
+  "slug": "notion"
+ },
+ {
+  "label": "Jira",
+  "file": "img/integrations/jira.png",
+  "slug": "jira"
+ },
+ {
+  "label": "Linear",
+  "file": "img/integrations/linear.png",
+  "slug": "linear"
+ },
+ {
+  "label": "Stripe",
+  "file": "img/integrations/stripe.png",
+  "slug": "stripe"
+ },
+ {
+  "label": "Airtable",
+  "file": "img/integrations/airtable.png",
+  "slug": "airtable_oauth"
+ },
+ {
+  "label": "Asana",
+  "file": "img/integrations/asana.png",
+  "slug": "asana"
+ },
+ {
+  "label": "Shopify",
+  "file": "img/integrations/shopify.png",
+  "slug": "shopify"
+ },
+ {
+  "label": "Zendesk",
+  "file": "img/integrations/zendesk.png",
+  "slug": "zendesk"
+ },
+ {
+  "label": "Dropbox",
+  "file": "img/integrations/dropbox.png",
+  "slug": "dropbox"
+ },
+ {
+  "label": "Twilio",
+  "file": "img/integrations/twilio.png",
+  "slug": "sendgrid"
+ },
+ {
+  "label": "Mailchimp",
+  "file": "img/integrations/mailchimp.png",
+  "slug": "mailchimp"
+ },
+ {
+  "label": "Trello",
+  "file": "img/integrations/trello.png",
+  "slug": "trello"
+ },
+ {
+  "label": "Intercom",
+  "file": "img/integrations/intercom.png",
+  "slug": "intercom"
+ },
+ {
+  "label": "Discord",
+  "file": "img/integrations/discord.png",
+  "slug": "discord"
+ },
+ {
+  "label": "Zoom",
+  "file": "img/integrations/zoom.png",
+  "slug": "zoom"
+ },
+ {
+  "label": "OpenAI",
+  "file": "img/integrations/openai.png",
+  "slug": "openai"
+ },
+ {
+  "label": "Microsoft Teams",
+  "file": "img/integrations/microsoft-teams.png",
+  "slug": "microsoft_teams"
+ },
+ {
+  "label": "Outlook",
+  "file": "img/integrations/outlook.png",
+  "slug": "microsoft_outlook"
+ },
+ {
+  "label": "Microsoft Excel",
+  "file": "img/integrations/microsoft-excel.png",
+  "slug": "microsoft_excel"
+ },
+ {
+  "label": "AWS",
+  "file": "img/integrations/aws.png",
+  "slug": "aws"
+ },
+ {
+  "label": "Google Cloud",
+  "file": "img/integrations/google-cloud.png",
+  "slug": "google_cloud"
+ },
+ {
+  "label": "GitLab",
+  "file": "img/integrations/gitlab.png",
+  "slug": "gitlab"
+ },
+ {
+  "label": "Figma",
+  "file": "img/integrations/figma.png",
+  "slug": "figma"
+ },
+ {
+  "label": "Calendly",
+  "file": "img/integrations/calendly.png",
+  "slug": "calendly_v2"
+ },
+ {
+  "label": "PayPal",
+  "file": "img/integrations/paypal.png",
+  "slug": "paypal"
+ },
+ {
+  "label": "QuickBooks",
+  "file": "img/integrations/quickbooks.png",
+  "slug": "quickbooks"
+ },
+ {
+  "label": "monday.com",
+  "file": "img/integrations/monday-com.png",
+  "slug": "monday"
+ },
+ {
+  "label": "ClickUp",
+  "file": "img/integrations/clickup.png",
+  "slug": "clickup"
+ },
+ {
+  "label": "Confluence",
+  "file": "img/integrations/confluence.png",
+  "slug": "confluence"
+ },
+ {
+  "label": "Snowflake",
+  "file": "img/integrations/snowflake.png",
+  "slug": "snowflake"
+ },
+ {
+  "label": "LinkedIn",
+  "file": "img/integrations/linkedin.png",
+  "slug": "linkedin"
+ },
+ {
+  "label": "YouTube",
+  "file": "img/integrations/youtube.png",
+  "slug": "youtube_data_api"
+ },
+ {
+  "label": "Telegram",
+  "file": "img/integrations/telegram.png",
+  "slug": "telegram_bot_api"
+ },
+ {
+  "label": "WhatsApp",
+  "file": "img/integrations/whatsapp.png",
+  "slug": "whatsapp_business"
+ },
+ {
+  "label": "Typeform",
+  "file": "img/integrations/typeform.png",
+  "slug": "typeform"
+ },
+ {
+  "label": "Webflow",
+  "file": "img/integrations/webflow.png",
+  "slug": "webflow"
+ },
+ {
+  "label": "Box",
+  "file": "img/integrations/box.png",
+  "slug": "dropbox"
+ },
+ {
+  "label": "SendGrid",
+  "file": "img/integrations/sendgrid.png",
+  "slug": "sendgrid"
+ },
+ {
+  "label": "PagerDuty",
+  "file": "img/integrations/pagerduty.png",
+  "slug": "pagerduty"
+ },
+ {
+  "label": "Datadog",
+  "file": "img/integrations/datadog.png",
+  "slug": "datadog"
+ },
+ {
+  "label": "Segment",
+  "file": "img/integrations/segment.png",
+  "slug": "segment"
+ },
+ {
+  "label": "Microsoft SQL",
+  "file": "img/integrations/microsoft-sql.png",
+  "slug": "microsoft_sql_server"
+ },
+ {
+  "label": "Google Forms",
+  "file": "img/integrations/google-forms.png",
+  "slug": "google_forms"
+ }
+]

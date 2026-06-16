@@ -127,3 +127,29 @@
     else if (/^[0-5]$/.test(e.key)) { e.preventDefault(); go(parseInt(e.key, 10)); }
   });
 })();
+
+// ============================================================
+//  04 · integration icon wall (from the integration dashboard)
+// ============================================================
+(function () {
+  const wall = document.getElementById("iconwall");
+  if (!wall) return;
+  fetch("img/integrations/_manifest.json")
+    .then((r) => r.json())
+    .then((apps) => {
+      apps.forEach((a) => {
+        const d = document.createElement("div");
+        d.className = "ic";
+        d.title = a.label;
+        const img = document.createElement("img");
+        img.src = a.file; img.alt = a.label; img.loading = "lazy";
+        d.appendChild(img);
+        wall.appendChild(d);
+      });
+      const more = document.createElement("div");
+      more.className = "ic more";
+      more.innerHTML = "+2,950<br>more";
+      wall.appendChild(more);
+    })
+    .catch(() => { document.getElementById("iconnote").textContent = "3,000+ integrations via Pipedream."; });
+})();

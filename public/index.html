@@ -127,13 +127,10 @@
         <div class="cap-body">
           <p class="kicker">CONNECTED OUT OF THE BOX</p>
           <h2><span class="accent">3,000+</span> app integrations.</h2>
-          <p class="big">One-click OAuth to <strong>3,000+ apps</strong> — GitHub, Gmail, Salesforce, Notion, Jira,
-            Stripe and more — plus a real cloud browser for everything else.
-            <strong>If it has a login and a screen, your workforce can use it.</strong></p>
-          <div class="logos">
-            <span>GitHub</span><span>Slack</span><span>Gmail</span><span>Salesforce</span><span>Notion</span>
-            <span>Jira</span><span>Stripe</span><span>HubSpot</span><span>Airtable</span><span>+2,991 more</span>
-          </div>
+          <p class="big">One-click OAuth to <strong>3,000+ apps</strong> — plus a real cloud browser for everything
+            else. <strong>If it has a login and a screen, your workforce can use it.</strong></p>
+          <div class="iconwall" id="iconwall"><!-- top apps injected from the integration dashboard --></div>
+          <p class="iconnote" id="iconnote">Top 50 of <b>3,000+</b> — live from our integration dashboard.</p>
         </div>
       </div>
     </section>
@@ -147,25 +144,39 @@
           <h2>The <span class="accent">benchmarks.</span></h2>
           <p class="big">Two <strong>independent, third-party</strong> benchmarks — not our own scoreboard. They measure the
             two hardest things an autonomous workforce must do, and on our internal runs we <strong>top both.</strong></p>
-          <div class="bgrid">
-            <div class="bcard">
-              <div class="bhead"><span class="btag">YC-Bench</span><span class="bby">Collinear AI</span></div>
-              <p class="bwhat"><b>What it is:</b> the agent runs a simulated startup for a <b>full year</b> — hundreds of
-                decisions, payroll, adversarial clients — testing <b>long-horizon execution &amp; coherence.</b></p>
-              <p class="bwhy"><b>Our result:</b> <b class="win">state-of-the-art, &gt; $2.3M</b> avg over 3 seeds —
-                <b>Top-3 are all Ninja</b>, peak <b>$2.88M</b> (best public model: $1.98M).</p>
+          <div class="boards">
+            <!-- YC-Bench leaderboard -->
+            <div class="board">
+              <div class="bhead"><span class="btag">YC-Bench</span><span class="bby">Collinear AI · long-horizon execution</span></div>
+              <p class="bwhat"><b>What it is:</b> an agent runs a simulated startup for a <b>full year</b> — payroll,
+                adversarial clients, hundreds of decisions. Metric = <b>net worth</b> after 3 seeds.</p>
+              <div class="lb">
+                <div class="row win"><span class="rk">🥷1</span><span class="who">Ninja — best run <em>internal</em></span><span class="track"><i style="--w:100%"></i></span><b class="val">$2.88M</b></div>
+                <div class="row win"><span class="rk">🥷2</span><span class="who">Ninja — avg / 3 seeds <em>internal</em></span><span class="track"><i style="--w:81%"></i></span><b class="val">&gt;$2.3M</b></div>
+                <div class="row"><span class="rk">3</span><span class="who">Claude Fable 5 <em>public #1</em></span><span class="track"><i style="--w:69%"></i></span><b class="val">$1.98M</b></div>
+                <div class="row"><span class="rk">4</span><span class="who">Claude Opus 4.7</span><span class="track"><i style="--w:59%"></i></span><b class="val">$1.71M</b></div>
+                <div class="row"><span class="rk">5</span><span class="who">GLM-5.1</span><span class="track"><i style="--w:52%"></i></span><b class="val">$1.51M</b></div>
+                <div class="row"><span class="rk">6</span><span class="who">Claude Opus 4.6</span><span class="track"><i style="--w:44%"></i></span><b class="val">$1.27M</b></div>
+              </div>
+              <p class="bnote">Ninja rows = our <b>internal runs</b> · public board topped by Fable&nbsp;5 ($1.98M). <b>Top-3 all Ninja.</b></p>
             </div>
-            <div class="bcard">
-              <div class="bhead"><span class="btag">Continual Learning Bench</span><span class="bby">UC Berkeley · Snorkel</span></div>
-              <p class="bwhat"><b>What it is:</b> measures how much an agent <b>improves across a sequence of tasks</b>
-                versus its own no-memory baseline — i.e. does it actually <b>learn from experience.</b></p>
-              <p class="bwhy"><b>Our result:</b> <b class="win">#1 and #2</b> via <b>PEEK</b> — the agent self-reflects on
-                every result and extracts win/fail rules (a plain setup ranked #7).</p>
+            <!-- Continual Learning leaderboard -->
+            <div class="board">
+              <div class="bhead"><span class="btag">Continual Learning Bench</span><span class="bby">UC Berkeley · Snorkel · learning that compounds</span></div>
+              <p class="bwhat"><b>What it is:</b> how much an agent <b>improves across a sequence</b> of tasks vs its own
+                no-memory baseline. Metric = <b>aggregate reward</b> (higher = learns more).</p>
+              <div class="lb">
+                <div class="row win"><span class="rk">🥷1</span><span class="who">PEEK · Opus 4.7 <em>internal</em></span><span class="track"><i style="--w:100%"></i></span><b class="val">+0.232</b></div>
+                <div class="row win"><span class="rk">🥷2</span><span class="who">PEEK · Opus 4.7 <em>internal</em></span><span class="track"><i style="--w:99%"></i></span><b class="val">+0.229</b></div>
+                <div class="row"><span class="rk">3</span><span class="who">ICL · Sonnet 4.6 <em>public #1</em></span><span class="track"><i style="--w:96%"></i></span><b class="val">+0.223</b></div>
+                <div class="row"><span class="rk">4</span><span class="who">ICL · GPT-5.4</span><span class="track"><i style="--w:87%"></i></span><b class="val">+0.201</b></div>
+                <div class="row"><span class="rk">5</span><span class="who">Claude Code · Sonnet 4.6</span><span class="track"><i style="--w:82%"></i></span><b class="val">+0.190</b></div>
+                <div class="row dim"><span class="rk">7</span><span class="who">ICL · Opus 4.7 — <b>no PEEK</b></span><span class="track"><i style="--w:44%"></i></span><b class="val">+0.102</b></div>
+              </div>
+              <p class="bnote">Same model, <b>+PEEK</b> jumps #7 → <b>#1 &amp; #2</b>. PEEK self-reflects + extracts win/fail rules every run.</p>
             </div>
           </div>
-          <p class="sub">Why it matters: <b>long-horizon execution</b> (YC-Bench) + <b>learning that compounds</b>
-            (Continual Learning) are exactly what separates a <i>workforce</i> from a chatbot. We lead on both.</p>
-          <p class="foot-note">Foundry Live Demo Night · GitHub SF · June 16, 2026 · shipped on Railway by an AI employee</p>
+          <p class="foot-note">Independent industry yardsticks we top on our internal runs · Foundry Live · GitHub SF · June 16, 2026</p>
         </div>
       </div>
     </section>
