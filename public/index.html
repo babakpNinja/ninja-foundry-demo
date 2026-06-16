@@ -4,53 +4,173 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>NinjaTech — Not another tool. A workforce.</title>
-<meta name="description" content="AI Employees: long-running, self-evolving agents that do the whole job and ship the finished work. Live at Foundry Live, GitHub SF." />
+<meta name="description" content="AI Employees: long-running, self-evolving, collaborative agents that do the whole job and ship the finished work." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600;700;800;900&family=Roboto+Mono:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg" id="bg"></div>
-  <div class="bg-fallback"></div>
-  <div class="grain"></div>
+  <canvas id="net"></canvas>
+  <div class="vignette"></div>
 
-  <main class="wrap">
-    <header class="topline">
-      <span class="mark">NINJA<span class="dot">🥷</span></span>
-      <span class="badge">● LIVE · Foundry Live Demo Night</span>
-    </header>
+  <!-- numbered pager rail -->
+  <nav class="rail" id="rail" aria-label="Sections">
+    <a href="#s0" data-n="★" class="active"></a>
+    <a href="#s1" data-n="1"></a>
+    <a href="#s2" data-n="2"></a>
+    <a href="#s3" data-n="3"></a>
+    <a href="#s4" data-n="4"></a>
+    <a href="#s5" data-n="5"></a>
+  </nav>
 
-    <section class="hero">
-      <p class="eyebrow">NINJATECH · AI EMPLOYEES</p>
-      <h1>Not another tool.<br /><span class="accent">A&nbsp;workforce.</span></h1>
-      <p class="lede">
-        Long-running, self-evolving AI employees that take a goal and deliver the
-        <strong>finished work</strong> — across 3,000+ tools and the open web — right inside Slack.
-      </p>
+  <header class="topfixed">
+    <span class="mark">NINJA<span class="dot">🥷</span></span>
+    <span class="badge"><span class="pulse"></span> Foundry Live · GitHub SF</span>
+  </header>
 
-      <div class="countdown" id="countdown" aria-label="Countdown to the demo">
-        <div class="unit"><span id="dd">00</span><label>days</label></div>
-        <div class="sep">:</div>
-        <div class="unit"><span id="hh">00</span><label>hours</label></div>
-        <div class="sep">:</div>
-        <div class="unit"><span id="mm">00</span><label>min</label></div>
-        <div class="sep">:</div>
-        <div class="unit"><span id="ss">00</span><label>sec</label></div>
-      </div>
-      <p class="countlabel" id="countlabel">until the live demo · GitHub SF</p>
+  <main class="deck" id="deck">
 
-      <div class="proof">
-        <span>🚀 Built &amp; deployed by an AI employee — from a single Slack message, live.</span>
+    <!-- ===== HERO ===== -->
+    <section class="slide hero" id="s0">
+      <div class="hero-grid">
+        <div class="left">
+          <p class="eyebrow">NINJATECH · AI EMPLOYEES</p>
+          <h1>Not another&nbsp;tool.<br /><span class="accent">A&nbsp;workforce.</span></h1>
+          <p class="lede">Long-running, self-evolving AI employees that take a goal and deliver the
+            <strong>finished work</strong> — across 3,000+ tools and the open web — right inside Slack.</p>
+          <div class="countdown" id="countdown">
+            <div class="unit"><span id="dd">00</span><label>days</label></div><div class="sep">:</div>
+            <div class="unit"><span id="hh">00</span><label>hrs</label></div><div class="sep">:</div>
+            <div class="unit"><span id="mm">00</span><label>min</label></div><div class="sep">:</div>
+            <div class="unit"><span id="ss">00</span><label>sec</label></div>
+          </div>
+          <p class="countlabel" id="countlabel">until the live demo</p>
+          <p class="scrollcue">scroll / ↓ for the 5 capabilities</p>
+        </div>
+        <div class="right">
+          <div class="demo-card">
+            <div class="card-head"><span class="dotrow"><i></i><i></i><i></i></span> #foundry-live · ask an AI employee</div>
+            <div class="chat">
+              <div class="msg you"><b>you</b> <span id="prompt">@Ninja build a launch page for tonight and deploy it</span></div>
+              <div class="term" id="term"></div>
+            </div>
+            <div class="card-foot">
+              <input id="goal" type="text" value="build a launch page for tonight and deploy it" spellcheck="false" />
+              <button id="send">Send to&nbsp;@Ninja&nbsp;🥷</button>
+            </div>
+            <p class="hint" id="hint">▶ Click <b>Send</b> (or Enter) to watch an AI employee ship it — live.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <footer class="foot">
-      <span>Foundry Live Demo Night · GitHub, San Francisco · June 16, 2026</span>
-      <span class="ship">shipped on Railway 🟢</span>
-    </footer>
-  </main>
+    <!-- ===== 1 · 24/7 ===== -->
+    <section class="slide cap" id="s1">
+      <div class="cap-wrap">
+        <div class="num">01</div>
+        <div class="cap-body">
+          <p class="kicker">ALWAYS ON</p>
+          <h2>Long-running. <span class="accent">24/7.</span></h2>
+          <p class="big">Give a goal on Friday, come back Monday to finished work. Your AI employees run for
+            <strong>months</strong>, not minutes — they never sleep, never take a break, and never lose the thread.</p>
+          <div class="stats">
+            <div class="stat"><b>∞</b><span>runtime — unmetered</span></div>
+            <div class="stat"><b>24/7</b><span>no breaks, no deadlines missed</span></div>
+            <div class="stat"><b>months</b><span>single objective, sustained</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===== 2 · SELF-EVOLVING ===== -->
+    <section class="slide cap" id="s2">
+      <div class="cap-wrap">
+        <div class="num">02</div>
+        <div class="cap-body">
+          <p class="kicker">IT COMPOUNDS</p>
+          <h2>Self-<span class="accent">evolving.</span></h2>
+          <p class="big">Every finished task and every self-corrected mistake sharpens the next run. Your workforce
+            <strong>gets better with use</strong> — institutional memory that compounds, not a model that forgets.</p>
+          <div class="stats">
+            <div class="stat"><b>#1 &amp; #2</b><span>Continual Learning Bench (via PEEK)</span></div>
+            <div class="stat"><b>learns</b><span>extracts win/fail rules every run</span></div>
+            <div class="stat"><b>yours</b><span>the learning loop you own</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3 · COLLABORATIVE ===== -->
+    <section class="slide cap" id="s3">
+      <div class="cap-wrap">
+        <div class="num">03</div>
+        <div class="cap-body">
+          <p class="kicker">A TEAM, NOT A BOT</p>
+          <h2>Collaborative, in <span class="accent">real time.</span></h2>
+          <p class="big">Agents work as a team and with your people — live, where you already work.
+            Many jobs in parallel, none of them blocking you.</p>
+          <div class="chips">
+            <span class="chip on">Slack ✓</span>
+            <span class="chip on">Microsoft Teams ✓</span>
+            <span class="chip soon">WhatsApp · coming soon</span>
+          </div>
+          <p class="sub">Agent-to-agent hand-offs + multi-human collaboration, right in the channel — no new app to learn.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4 · INTEGRATIONS ===== -->
+    <section class="slide cap" id="s4">
+      <div class="cap-wrap">
+        <div class="num">04</div>
+        <div class="cap-body">
+          <p class="kicker">CONNECTED OUT OF THE BOX</p>
+          <h2><span class="accent">3,000+</span> app integrations.</h2>
+          <p class="big">One-click OAuth to <strong>3,000+ apps</strong> — GitHub, Gmail, Salesforce, Notion, Jira,
+            Stripe and more — plus a real cloud browser for everything else.
+            <strong>If it has a login and a screen, your workforce can use it.</strong></p>
+          <div class="logos">
+            <span>GitHub</span><span>Slack</span><span>Gmail</span><span>Salesforce</span><span>Notion</span>
+            <span>Jira</span><span>Stripe</span><span>HubSpot</span><span>Airtable</span><span>+2,991 more</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5 · BENCHMARKS ===== -->
+    <section class="slide cap bench" id="s5">
+      <div class="cap-wrap wide">
+        <div class="num">05</div>
+        <div class="cap-body">
+          <p class="kicker">PROVEN, NOT CLAIMED</p>
+          <h2>The <span class="accent">benchmarks.</span></h2>
+          <p class="big">Two <strong>independent, third-party</strong> benchmarks — not our own scoreboard. They measure the
+            two hardest things an autonomous workforce must do, and on our internal runs we <strong>top both.</strong></p>
+          <div class="bgrid">
+            <div class="bcard">
+              <div class="bhead"><span class="btag">YC-Bench</span><span class="bby">Collinear AI</span></div>
+              <p class="bwhat"><b>What it is:</b> the agent runs a simulated startup for a <b>full year</b> — hundreds of
+                decisions, payroll, adversarial clients — testing <b>long-horizon execution &amp; coherence.</b></p>
+              <p class="bwhy"><b>Our result:</b> <b class="win">state-of-the-art, &gt; $2.3M</b> avg over 3 seeds —
+                <b>Top-3 are all Ninja</b>, peak <b>$2.88M</b> (best public model: $1.98M).</p>
+            </div>
+            <div class="bcard">
+              <div class="bhead"><span class="btag">Continual Learning Bench</span><span class="bby">UC Berkeley · Snorkel</span></div>
+              <p class="bwhat"><b>What it is:</b> measures how much an agent <b>improves across a sequence of tasks</b>
+                versus its own no-memory baseline — i.e. does it actually <b>learn from experience.</b></p>
+              <p class="bwhy"><b>Our result:</b> <b class="win">#1 and #2</b> via <b>PEEK</b> — the agent self-reflects on
+                every result and extracts win/fail rules (a plain setup ranked #7).</p>
+            </div>
+          </div>
+          <p class="sub">Why it matters: <b>long-horizon execution</b> (YC-Bench) + <b>learning that compounds</b>
+            (Continual Learning) are exactly what separates a <i>workforce</i> from a chatbot. We lead on both.</p>
+          <p class="foot-note">Foundry Live Demo Night · GitHub SF · June 16, 2026 · shipped on Railway by an AI employee</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
   <script src="app.js"></script>
 </body>
 </html>
