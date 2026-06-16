@@ -1,0 +1,79 @@
+:root{
+  --blue:#005cff; --blue-2:#3b82ff; --cyan:#00c2d1;
+  --ink:#0b1233; --muted:#5b6166; --bg:#fafbff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:"Roboto",system-ui,sans-serif;color:var(--ink);background:var(--bg);
+  overflow:hidden;-webkit-font-smoothing:antialiased;
+}
+
+/* AI-generated hero image (loaded if present), else CSS gradient fallback */
+.bg{position:fixed;inset:0;z-index:0;background-size:cover;background-position:right center;
+  opacity:0;transition:opacity .8s ease}
+.bg.loaded{opacity:.55}
+.bg-fallback{position:fixed;inset:0;z-index:-1;
+  background:
+   radial-gradient(1200px 700px at 78% 18%, rgba(0,92,255,.30), transparent 60%),
+   radial-gradient(900px 600px at 12% 90%, rgba(0,194,209,.18), transparent 55%),
+   linear-gradient(135deg,#fafbff 0%,#eef3ff 55%,#e2ecff 100%);}
+/* white scrim so text stays legible over any image */
+.wrap::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(100deg, rgba(250,251,255,.97) 0%, rgba(250,251,255,.88) 40%, rgba(250,251,255,.55) 72%, rgba(250,251,255,.32) 100%);}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;
+  background:radial-gradient(circle at 50% 50%, transparent 60%, rgba(11,18,51,.05));}
+
+.wrap{position:relative;z-index:2;height:100%;max-width:1180px;margin:0 auto;
+  padding:clamp(1.2rem,4vh,2.4rem) clamp(1.4rem,5vw,4rem);
+  display:flex;flex-direction:column}
+
+.topline{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.mark{font-family:"Overpass";font-weight:900;letter-spacing:.18em;font-size:1.1rem;color:var(--ink)}
+.mark .dot{margin-left:.3em}
+.badge{font-family:"Overpass";font-weight:700;font-size:.72rem;letter-spacing:.12em;
+  color:var(--blue);background:rgba(0,92,255,.10);border:1px solid rgba(0,92,255,.25);
+  padding:.4em .8em;border-radius:999px;text-transform:uppercase}
+.badge::first-letter{}
+
+.hero{flex:1;display:flex;flex-direction:column;justify-content:center;max-width:880px}
+.eyebrow{font-family:"Overpass";font-weight:700;letter-spacing:.28em;font-size:.78rem;
+  color:var(--blue);text-transform:uppercase;margin-bottom:1rem}
+h1{font-family:"Overpass";font-weight:900;line-height:.98;letter-spacing:-.02em;
+  font-size:clamp(2.8rem,9vw,6.6rem);color:var(--ink)}
+h1 .accent{background:linear-gradient(100deg,var(--blue),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:clamp(1.05rem,2.2vw,1.5rem);line-height:1.45;color:var(--muted);
+  margin:1.4rem 0 2rem;max-width:46ch}
+.lede strong{color:var(--ink);font-weight:700}
+
+/* Countdown */
+.countdown{display:flex;align-items:flex-end;gap:clamp(.3rem,1.4vw,1rem)}
+.unit{display:flex;flex-direction:column;align-items:center;min-width:clamp(58px,11vw,108px);
+  background:rgba(255,255,255,.65);border:1px solid rgba(0,92,255,.18);border-radius:16px;
+  padding:.6rem .4rem .5rem;backdrop-filter:blur(8px);
+  box-shadow:0 14px 40px rgba(0,92,255,.14)}
+.unit span{font-family:"Overpass";font-weight:900;font-variant-numeric:tabular-nums;
+  font-size:clamp(2rem,6vw,4.2rem);line-height:1;color:var(--blue);
+  text-shadow:0 0 30px rgba(0,92,255,.25)}
+.unit label{font-family:"Overpass";font-weight:700;text-transform:uppercase;
+  letter-spacing:.14em;font-size:.62rem;color:var(--muted);margin-top:.4rem}
+.sep{font-family:"Overpass";font-weight:900;font-size:clamp(1.6rem,4vw,3rem);
+  color:rgba(0,92,255,.35);padding-bottom:1.4rem}
+.countlabel{font-family:"Overpass";font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  font-size:.8rem;color:var(--muted);margin-top:1rem}
+
+.proof{margin-top:1.8rem}
+.proof span{display:inline-block;font-weight:500;font-size:clamp(.85rem,1.8vw,1.05rem);
+  color:var(--ink);background:rgba(0,92,255,.08);border-left:3px solid var(--blue);
+  padding:.7em 1.1em;border-radius:0 10px 10px 0}
+
+.foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  font-size:.82rem;color:var(--muted);font-weight:500;flex-wrap:wrap}
+.foot .ship{color:#0a8f3c;font-weight:700}
+
+@media (max-width:560px){
+  .badge{display:none}
+  .sep{display:none}
+  .countdown{gap:.5rem}
+}
