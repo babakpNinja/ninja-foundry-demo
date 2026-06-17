@@ -203,3 +203,8 @@ h1.belief{font-size:clamp(2rem,4.4vw,4rem);line-height:1.02}
 .qrlabel{display:flex;flex-direction:column;gap:.2rem}
 .qrlabel b{font-family:"Overpass";font-weight:800;font-size:.95rem;color:#fff}
 .qrlabel span{font-family:"Roboto Mono",monospace;font-size:.74rem;color:var(--cyan)}
+
+/* hero 'what we're building' descriptor */
+.building{font-family:"Overpass";font-weight:700;font-size:clamp(1.05rem,2vw,1.55rem);line-height:1.25;
+  color:#eaf0ff;margin:.7rem 0 .2rem;letter-spacing:.01em}
+.building strong{color:#fff;font-weight:900}
