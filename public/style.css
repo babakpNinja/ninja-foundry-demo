@@ -187,3 +187,10 @@ h2{font-family:"Overpass";font-weight:900;font-size:clamp(2.2rem,5vw,4rem);line-
 .srclink em{font-style:normal;font-weight:500;font-size:.74rem;opacity:.82}
 .srclink:hover{transform:translateY(-1px)}
 @media(max-width:920px){.benchpanel{grid-template-columns:1fr}.bchart{height:300px}}
+
+/* hero belief tagline + Satya quote (#29) */
+h1.belief{font-size:clamp(2rem,4.4vw,4rem);line-height:1.02}
+.satya{position:relative;margin:1.3rem 0 1.5rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--cyan);
+  font-family:"Roboto",sans-serif;font-style:italic;font-size:clamp(.95rem,1.5vw,1.2rem);line-height:1.5;color:#dbe6ff;max-width:46ch}
+.satya cite{display:block;font-style:normal;font-size:.8rem;color:var(--muted);margin-top:.55rem;letter-spacing:.02em}
+.satya cite em{font-style:italic;color:var(--blue-b)}
