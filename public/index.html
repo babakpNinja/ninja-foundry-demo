@@ -14,6 +14,14 @@
   <canvas id="net"></canvas>
   <div class="vignette"></div>
 
+  <!-- language toggle -->
+  <div class="langtoggle" id="langtoggle" aria-label="Language">
+    <button data-lang="en" class="on">EN</button>
+    <button data-lang="zh">中文</button>
+    <button data-lang="hi">हिन्दी</button>
+    <button data-lang="la">Latina</button>
+  </div>
+
   <!-- numbered pager rail -->
   <nav class="rail" id="rail" aria-label="Sections">
     <a href="#s0" data-n="★" class="active"></a>
@@ -192,6 +200,7 @@
 
   </main>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="i18n.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
