@@ -194,3 +194,12 @@ h1.belief{font-size:clamp(2rem,4.4vw,4rem);line-height:1.02}
   font-family:"Roboto",sans-serif;font-style:italic;font-size:clamp(.95rem,1.5vw,1.2rem);line-height:1.5;color:#dbe6ff;max-width:46ch}
 .satya cite{display:block;font-style:normal;font-size:.8rem;color:var(--muted);margin-top:.55rem;letter-spacing:.02em}
 .satya cite em{font-style:italic;color:var(--blue-b)}
+
+/* hero QR → AI Employees (presentation page) */
+.qrcard{display:inline-flex;align-items:center;gap:.85rem;margin-top:1.3rem;background:rgba(13,23,51,.6);
+  border:1px solid var(--line);border-radius:14px;padding:.55rem .95rem .55rem .55rem;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.qrbox{background:#fff;border-radius:9px;padding:6px;line-height:0;flex:none}
+.qrbox .ntqr{width:86px;height:86px;display:block}
+.qrlabel{display:flex;flex-direction:column;gap:.2rem}
+.qrlabel b{font-family:"Overpass";font-weight:800;font-size:.95rem;color:#fff}
+.qrlabel span{font-family:"Roboto Mono",monospace;font-size:.74rem;color:var(--cyan)}
